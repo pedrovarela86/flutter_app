@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutterapp/src/ui/body/MoveList.dart';
+import 'ui/body/MovieList.dart';
 
 class MyApp extends StatelessWidget {
   
