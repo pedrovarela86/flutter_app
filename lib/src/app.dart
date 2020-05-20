@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'ui/body/MovieList.dart';
+import 'package:flutterapp/src/ui/body/MovieList.dart';
+import 'package:flutterapp/src/ui/sample/SamplePage.dart';
 
 class MyApp extends StatelessWidget {
   
@@ -8,7 +9,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      theme: ThemeData.dark(),
+      theme: ThemeData(primarySwatch: Colors.yellow) ,
       home: MovieList(),
     );
   }
