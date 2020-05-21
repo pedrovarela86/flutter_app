@@ -7,6 +7,7 @@ abstract class MovieProvider {
 }
 
 class MovieApiProvider implements MovieProvider {
+  
   Client client = Client();
   final String _url = "https://api.themoviedb.org/3/movie/popular?api_key=0ed8ce8dccccd2dfddebe14efc0f7df3";
 
