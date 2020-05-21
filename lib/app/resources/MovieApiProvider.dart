@@ -1,6 +1,6 @@
+import 'package:flutterapp/app/models/item_model.dart';
 import 'package:http/http.dart' show Client;
 import 'dart:convert';
-import '../models/ItemModel.dart';
 
 abstract class MovieProvider {
    Future<ItemModel> fetchMovieList();

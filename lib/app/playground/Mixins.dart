@@ -4,9 +4,17 @@ abstract class AirborneInsect extends Insect with Fluttering {
   }
 }
 
-abstract class Bird with Fluttering {
+class Bird with Fluttering, Biting {
+
+  String action;
+
   void chirp() {
-    print("chirping");
+    action = "chirp";
+    print("Bird is chirping");
+  }
+
+  void bite(){
+    action = "bite";
   }
 }
 

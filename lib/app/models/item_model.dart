@@ -1,5 +1,3 @@
-import 'package:flutterapp/src/models/Result.dart';
-
 import 'Result.dart';
 
 class ItemModel {

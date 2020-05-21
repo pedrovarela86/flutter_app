@@ -1,15 +1,19 @@
 import 'package:flutter/material.dart';
-import 'package:flutterapp/src/blocs/MoviesBloc.dart';
+import 'package:flutter_modular/flutter_modular.dart';
+import 'package:flutterapp/app/blocs/movies_bloc.dart';
+import 'package:flutterapp/app/models/item_model.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 
-import '../../models/ItemModel.dart';
+import '../../Routes.dart';
 
+//Movie list page
 class MovieList extends StatefulWidget {
   @override
-  State<StatefulWidget> createState() => MovieListState();
+  State<StatefulWidget> createState() => _MovieListState();
 }
 
-class MovieListState extends State<MovieList> {
+//State of Movie list page state
+class _MovieListState extends State<MovieList> {
   Scaffold buildScaffold() => Scaffold(
         appBar: AppBar(title: Text("Popular Movies")),
         body: StreamBuilder(
@@ -65,9 +69,14 @@ Widget buildList(AsyncSnapshot<ItemModel> snapshot) {
 
         var inkResponse = InkResponse(
           child: column,
-          onTap: () => Fluttertoast.showToast(msg: index.toString()),
+          onTap: () => fluttertoast(index)
         );
 
         return GridTile(child: inkResponse);
       });
+}
+
+void fluttertoast(int index) {
+   Fluttertoast.showToast(msg: index.toString());
+   Modular.to.pushNamed(Routers.details,arguments: index);
 }

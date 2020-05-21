@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutterapp/src/app.dart';
-import 'package:flutterapp/src/ui/body/MovieList.dart';
+import 'package:flutter_modular/flutter_modular.dart';
+
+import 'app/movies_app.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(ModularApp(module: MoviesModularApp(),));
 }

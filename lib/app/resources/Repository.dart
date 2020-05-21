@@ -1,6 +1,6 @@
+import 'package:flutterapp/app/models/item_model.dart';
 import 'package:flutterapp/src/resources/movieApiProvider.dart';
 
-import '../models/ItemModel.dart';
 
 class Repository{
 
