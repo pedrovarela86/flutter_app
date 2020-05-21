@@ -6,7 +6,6 @@ import 'modules/details/movie_details.dart';
 import 'modules/home/movie_home.dart';
 
 class MoviesModularApp extends MainModule {
-  
   @override
   List<Bind> get binds => [];
 
@@ -15,8 +14,9 @@ class MoviesModularApp extends MainModule {
 
   @override
   List<Router> get routers => [
-        Router(Routers.home, child: (_,args) => MovieList()),
-        Router(Routers.details, child: (_, args) => MovieDetail(movieId:args.params['id']))
+        Router(Routers.home, child: (_, args) => MovieList()),
+        Router(Routers.details,
+            child: (_, args) => MovieDetail(movie: args.data))
       ];
 }
 

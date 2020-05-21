@@ -1,6 +1,6 @@
-import 'package:flutterapp/app/models/movie.dart';
+import 'movie.dart';
 
-class ItemModel {
+class MoviePage {
   int _page;
   int get page => _page;
 
@@ -13,7 +13,7 @@ class ItemModel {
   List<dynamic> _results;
   List<dynamic> get results => _results;
 
-  ItemModel.fromJson(Map<String, dynamic> parsedJson) {
+  MoviePage.fromJson(Map<String, dynamic> parsedJson) {
     print(parsedJson[RESULTS].length);
     _page = parsedJson[PAGE];
     _totalResults = parsedJson[TOTAL_RESULTS];
